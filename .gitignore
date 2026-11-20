@@ -1,0 +1,21 @@
+# Build artifacts -- regenerate these with `make`
+build/
+*.o
+a.out
+
+# Programs compiled next to their source, as in docs/PI-SETUP.md
+Task3/stack_and_heap
+Task3/foo
+Task4/matrix_multiplication
+Task5/calculate_gflops
+*.exe
+*.dSYM/
+
+# Crash dumps
+core
+vgcore.*
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini

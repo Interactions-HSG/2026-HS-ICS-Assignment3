@@ -1,0 +1,30 @@
+name: Submission check
+
+# Runs on every push so you get feedback while you work, not only at the deadline.
+# It never grades your answers -- it only tells you what is still missing or broken.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  compiles:
+    name: Code compiles
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compiler version
+        run: gcc --version | head -1
+
+      # Only compiles -- nothing is run. Your programs belong on the Pi, and
+      # calculate_gflops would keep this check busy for a very long time.
+      - name: Compile all programs
+        run: make all
+
+  complete:
+    name: Hand-in is complete
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/scripts/check_submission.py
