@@ -1,6 +1,6 @@
 # Assignment 3: Memory Management
 
-**Einführung in Computersysteme — HS 2026 · 10 points · Deadline: 20 December 2026, 23:59 CET**
+**Einführung in Computersysteme — HS 2026 · 10 points · Deadline: 13 December 2026, 23:59 CET**
 
 You will explore **memory allocation and code profiling** in C: the heap and the stack, memory
 leaks, a buffer overflow, and how fast your Raspberry Pi multiplies matrices. 📄 The questions
